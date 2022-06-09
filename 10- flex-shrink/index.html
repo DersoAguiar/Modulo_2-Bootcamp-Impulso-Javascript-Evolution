@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos flex shrink</title>
+
+    <style>
+        .flex-container {
+            display: flex;
+            border: 1px solid black;
+            max-width: 350px;
+        }
+
+        .itens {
+            margin: 5px;
+            background-color: blueviolet;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .shrink-0 {
+            flex-shrink: 0;
+            flex-basis: 100px;
+        }
+
+        .shrink-1 {
+            flex-shrink: 1;
+        }
+
+        .shrink-2 {
+            flex-shrink: 2;
+            flex-basis: 100px;
+        }
+        .shrink-3 {
+            flex-shrink: 3;
+            flex-basis: 100px;
+        }
+
+        .fg-1{
+            flex-grow: 1;
+        }
+        .fg-0{
+            flex-grow: 0;
+        }
+    </style>
+</head>
+<body>
+    <h2>flex-shrink 1</h2>
+    <div class="flex-container">
+        <div class="itens shrink-1 fg-1">a</div>
+        <div class="itens shrink-1 fg-1">b</div>
+        <div class="itens shrink-1 fg-1">c</div>
+        <div class="itens shrink-1 fg-1">d</div>
+        <div class="itens shrink-1 fg-1">e</div>
+    </div>
+
+    <h2>flex-shrink 1</h2>
+    <div class="flex-container">
+        <div class="itens shrink-1 fg-1">a</div>
+        <div class="itens shrink-1 fg-1">Lorem, ipsum dolor sit amet consectetur andae quo molestiae?</div>
+        <div class="itens shrink-1 fg-1">c</div>
+        <div class="itens shrink-1 fg-1">d</div>
+        <div class="itens shrink-1 fg-1">e</div>
+    </div>
+
+    <h2>flex-shrink 0 / basis 100px</h2>
+    <div class="flex-container">
+        <div class="itens shrink-0 fg-1">a</div>
+        <div class="itens shrink-0 fg-1">Lorem, ipsum dol</div>
+        <div class="itens shrink-0 fg-1">c</div>
+        <div class="itens shrink-0 fg-1">d</div>
+        <div class="itens shrink-0 fg-1">e</div>
+    </div>
+
+    <h2>flex-shrink mix / basis 100px</h2>
+    <div class="flex-container">
+        <div class="itens shrink-2 fg-1">a</div>
+        <div class="itens shrink-3 fg-1">Lorem, ipsum dol</div>
+        <div class="itens shrink-2 fg-1">c</div>
+        <div class="itens shrink-2 fg-1">d</div>
+        <div class="itens shrink-3 fg-1">e</div>
+    </div>
+</body>
+</html>

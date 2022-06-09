@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamento - flex basis</title>
+
+    <style>
+        .flex-container {
+            max-width: 500px;
+            border: 1px solid black;
+            display: flex;
+        }
+
+        .itens {
+            background-color: blueviolet;
+            color: white;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .bauto {
+            flex-basis: auto;
+        }
+        .b-0 {
+            flex-basis: 0;
+        }
+
+        .fg-o {
+            flex-grow: 0;
+        }
+
+        .fg-1 {
+            flex-grow: 1;
+        }
+
+        .fg-2 {
+            flex-grow: 2;
+        }
+
+        .w100 {
+            flex-basis: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Basis auto</h2>
+    <div class="flex-container">
+        <div class="itens bauto fg-2">a</div>
+        <div class="itens bauto fg-1">bbb</div>
+        <div class="itens bauto fg-1">c</div>
+        <div class="itens bauto fg-1">def</div>
+    </div>
+
+    <h2>Basis 0</h2>
+    <div class="flex-container">
+        <div class="itens b-0 fg-1">a</div>
+        <div class="itens b-0 fg-1">bbb</div>
+        <div class="itens b-0 fg-1">c</div>
+        <div class="itens b-0 fg-1">def</div>
+    </div>
+
+    <h2>Basis + width</h2>
+    <div class="flex-container">
+        <div class="itens w100 fg-2 ">a</div>
+        <div class="itens w100 fg-2 ">bbb</div>
+        <div class="itens w100 fg-2 ">ccc</div>
+        <div class="itens w100 fg-2 ">def</div>
+    </div>
+</body>
+</html>
